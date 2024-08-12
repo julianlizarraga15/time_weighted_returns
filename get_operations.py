@@ -1,10 +1,9 @@
 from src.client import IOLClient
-from pathlib import Path
+from src.config import GET_OPERATIONS_START_DATE, GET_OPERATIONS_END_DATE, OPERATIONS_CSV_PATH
 
 def main():
-
     client = IOLClient()
-    client.create_operations_dataframe("2024-01-01", "2024-08-01", "data/iol_operations.csv")
+    client.create_operations_dataframe(GET_OPERATIONS_START_DATE, GET_OPERATIONS_END_DATE, OPERATIONS_CSV_PATH)
 
 if __name__ == "__main__":
     main()
